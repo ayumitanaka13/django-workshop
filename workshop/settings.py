@@ -14,6 +14,10 @@ from pathlib import Path
 from dotenv import (find_dotenv, load_dotenv)
 import dj_database_url
 import os
+import environ
+
+env = environ.Env()
+environ.Env.read_env()
 
 
 
@@ -25,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '(qjn7@8l0qeo%ec$8@t($*z(l*rk=3-g@s0u$pt1(+d3y%zar0'
+SECRET_KEY =  env('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
