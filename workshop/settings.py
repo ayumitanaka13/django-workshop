@@ -14,10 +14,10 @@ from pathlib import Path
 from dotenv import (find_dotenv, load_dotenv)
 import dj_database_url
 import os
-import environ
+# import environ
 
-env = environ.Env()
-environ.Env.read_env()
+# env = environ.Env()
+# environ.Env.read_env()
 
 
 
